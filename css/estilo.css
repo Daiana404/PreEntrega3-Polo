@@ -2,6 +2,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap");
 /* estilo, grosor, tamaño, familia */
 /* Padding box/sizing */
+.footer {
+  width: 100%;
+  background: #1c1c1d;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .footer .footer__icon {
+    height: 25px;
+    fill: white; }
+  .footer .footer__nombre {
+    width: 30%;
+    text-align: center;
+    padding-bottom: 10px; }
+    .footer .footer__nombre span {
+      font-weight: 500;
+      font-size: 1rem;
+      background: linear-gradient(42deg, #ff10da 0%, #3429b0 23%, #39277e 36%, #3a2778 45%, #ec06bd 72%, #fd03c4 78%, #feb300 94%);
+      text-transform: uppercase;
+      /* clip informático */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+  .footer .footer__direcciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+    .footer .footer__direcciones div a {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      color: white; }
+      .footer .footer__direcciones div a p {
+        margin: 0;
+        padding: 10px; }
+    .footer .footer__direcciones .div--instagram:hover p {
+      color: #eba535; }
+    .footer .footer__direcciones .div--instagram:hover .footer__icon {
+      fill: #eba535; }
+    .footer .footer__direcciones .div--whatsapp:hover p {
+      color: #6c12b9; }
+    .footer .footer__direcciones .div--whatsapp:hover .footer__icon {
+      fill: #6c12b9; }
+    .footer .footer__direcciones .div--ubicacion:hover p {
+      color: #f418c7; }
+    .footer .footer__direcciones .div--ubicacion:hover .footer__icon {
+      fill: #f418c7; }
+
 html {
   font-size: 18px; }
 
@@ -9,22 +61,21 @@ html {
   padding: 0;
   margin: 0;
   border: 0;
-  font: normal 300 1rem "Nunito Sans"; }
+  font: normal 300 1rem "Nunito Sans";
+  list-style: none; }
+  * a {
+    text-decoration: none; }
 
-.navegador {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  height: 45px;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box; }
-  .navegador .navegador__buscador {
-    color: white; }
+.navbar {
+  transition: 500ms !important; }
+
+.nav-item :hover {
+  transition: 500ms;
+  background: linear-gradient(42deg, #f418c7 0%, #feb300 79%) !important;
+  text-transform: capitalize;
+  /* clip informático */
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important; }
 
 section {
   width: 100%; }
@@ -39,8 +90,8 @@ section {
   .inicio .inicio__txt {
     position: absolute;
     max-width: 30vw;
-    left: 3vw;
-    top: 10%;
+    left: 4vw;
+    top: 20%;
     color: white; }
     .inicio .inicio__txt h1 {
       font-size: calc(1rem + 2vw);
@@ -168,7 +219,7 @@ section {
     background-color: gray; }
 
 .comentarios {
-  padding: 250px 0 250px 0;
+  height: 100vh;
   background: linear-gradient(220deg, #feb300 0%, #fe8400 47%, #fd269a 100%, #9b159f 100%);
   display: grid;
   grid-template-columns: 400px 400px;
@@ -196,11 +247,11 @@ section {
     .comentarios div .comentarios__primero {
       font-weight: 800;
       font-size: 1rem;
-      background: #1c1c1d;
+      background: linear-gradient(220deg, #feb300 0%, #fe8400 47%, #fd269a 100%, #9b159f 100%);
       text-transform: uppercase;
       /* clip informático */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
     .comentarios div .comentarios__segundo {
       font-weight: 800;
-      color: gray; }
+      color: black; }

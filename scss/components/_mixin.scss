@@ -23,3 +23,11 @@
     padding-bottom: $top-bottom;
     box-sizing: border-box;
 }
+@mixin enlace-bootstrap(){
+    transition: 500ms;
+    background: $gradiente-3!important;
+    text-transform: capitalize;
+    /* clip informático */
+  -webkit-background-clip: text!important;
+  -webkit-text-fill-color: transparent!important;
+}

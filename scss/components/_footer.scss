@@ -1,0 +1,53 @@
+$colores:(
+    instagram: $amarillo,
+    whatsapp: $violeta,
+    ubicacion: $fucsia
+);
+.footer{
+    width: 100%;
+    background: $gris;
+    color: $color-font-generic;
+    text-align: center;
+    padding-top: $padding-espacio;
+    padding-bottom: $padding-espacio;
+    
+    @include flex(column, center, center);
+
+    .footer__icon{
+        height: 25px;
+        fill: $color-font-generic;
+    }
+    .footer__nombre{
+        width: 30%;
+        text-align: center;
+        
+        span{
+            @include text(500, 1rem, $gradiente-1);
+        }
+        padding-bottom: 10px;
+    }
+    .footer__direcciones{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        div a{
+                @include flex(row, center, center);
+                color: $color-font-generic;
+                p{
+                    margin: 0;
+                    padding: 10px;
+                }
+        } 
+        @each $name, $color in $colores {
+            .div--#{$name}:hover {
+                    p{
+                        color: #{$color};
+                    }
+                    .footer__icon{
+                        fill: $color;
+                    }
+
+            }
+        }
+    }
+}
