@@ -1,0 +1,204 @@
+@import './variables/_variables.scss';
+@import './components/_mixin.scss';
+//máximo z-index:2
+html{
+    font-size: 18px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font: $font-estilo-1;
+}
+.navegador{
+    @include flex(row, space-between, center);
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    height: $height-nav;
+    width: 100%;
+    
+    padding: 20px;
+    box-sizing: border-box;
+    .navegador__buscador{
+        color: $color-font-generic;
+    }
+
+}
+section{
+    width: 100%;
+}
+.inicio{
+    height: 100vh;
+    position: relative;
+    #inicio__img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+    }
+    .inicio__txt{
+        position: absolute;
+        max-width: 30vw;
+        left: 3vw;
+        top: 10%;
+        color: $color-font-generic;
+        h1{
+            font-size: $size-variable;
+            font-weight: $grueso-generic;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.presentacion{
+    padding-top: $padding-espacio;
+    padding-bottom: $padding-espacio;
+    display: grid;
+    grid-template-columns: $ancho-bloque $ancho-bloque $ancho-bloque;
+    grid-template-rows: 1fr 600px;
+    grid-template-areas: "a1 a1 a1"
+                         "a2 a3 a4";
+    align-content: center;
+    justify-content: center;
+    row-gap: $gap;
+    column-gap: 50px;
+    
+
+    .presentacion__txt {
+
+        @include flex(column, center, center);
+        text-align: center;
+        grid-area: a1;
+
+        div{
+            h2{
+                @include text($grueso-generic, 1.6rem, $gradiente-1); 
+                width: 40vw;
+            }
+            h3{
+                @include text($grueso-generic, 1.3rem, $gris);
+                padding: 20px 0 20px 0; /* top right bottom left */
+                width: 40vw;
+            }
+            p{
+                width: 40vw;
+                font-size: calc(0.1rem + 1vw);
+            }
+        }
+    }
+
+    .presentacion__diseño{
+        
+        @include flex(column, center, center);
+        grid-area: a2;
+        text-align: center;
+        div{
+            @include padd(20px, 0);
+            background-color: $amarillo;
+            border-radius: 30px;
+            @include flex(column, center, center);
+            h2{
+                @include text(900, 0.95rem, white);
+                padding: 20px 0 10px 0;
+            }
+            p{
+                @include text(400, 0.95rem, white);
+                padding: 20px;
+                text-transform: lowercase;
+                width: 80%;
+            }
+        }
+    }
+    .presentacion__responsive{
+        @extend .presentacion__diseño;
+        grid-area: a3;
+
+        div{
+            background-color: $azul;
+            h2, p{
+                background-color: white;
+            }
+        }
+    }
+    .presentacion__seguridad{
+        @extend .presentacion__diseño;
+
+        grid-area: a4;
+        div{
+            background-color: $lila;
+        }
+    }
+
+}
+.img-circular{
+    width: $size-img-circular;
+    height: $size-img-circular;
+    fill: white;
+}
+.trabajos{
+    
+    display: grid;
+    /* height: $alto-foto*5; */
+    grid-template-columns: $ancho-foto $ancho-foto $ancho-foto;
+    grid-template-rows: 80px $alto-foto $alto-foto $alto-foto;
+    grid-template-areas: "a0 a0 a0"
+                         "a1 a2 a3"
+                         "a4 a5 a6"
+                         "a7 a8 a9";
+    row-gap: $gap;
+    column-gap: $gap;
+    padding-bottom: $padding-espacio;
+    align-content: center;
+    justify-content: center;
+    
+    p{
+            @include text($grueso-generic, 1.8rem, $gris);
+        grid-area: a0;
+        text-align: center;
+        }
+    div{
+        background-color: gray;
+    }
+}
+
+.comentarios{
+    padding: 250px 0 250px 0 ;
+    background: $gradiente-2;
+    display: grid;
+    grid-template-columns: $ancho-bloque $ancho-bloque;
+    grid-template-rows: $alto-bloque;
+    column-gap: 100px;
+    
+    justify-content: center;
+    align-content: center;
+
+    div{
+        background-color: rgb(238, 234, 234);
+        border-radius: 35px;
+        box-shadow:  2px 2px 10px rgba(0, 0, 0, 0.35);
+        @include flex(column, center, center);
+
+        .comentarios__perfil{
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        p{
+            text-align: center;
+            width: 80%;
+            padding: 8px;
+        }
+        .comentarios__primero{
+            @include text($grueso-generic, 1rem, $gris);
+        }
+        .comentarios__segundo{
+            font-weight: $grueso-generic;
+            color: gray;
+        }
+    }
+    
+}

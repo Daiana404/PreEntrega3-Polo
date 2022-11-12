@@ -1,0 +1,25 @@
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin text($weight, $size, $color){
+    font-weight: $weight;
+    font-size: $size;
+    background: $color;
+    text-transform: uppercase;
+    /* clip informático */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Padding box/sizing */
+@mixin padd($top-bottom, $left-right){
+    padding-left: $left-right;
+    padding-right: $left-right;
+    padding-top: $top-bottom;
+    padding-bottom: $top-bottom;
+    box-sizing: border-box;
+}
