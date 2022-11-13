@@ -1,7 +1,7 @@
 $colores:(
-    instagram: $amarillo,
-    whatsapp: $violeta,
-    ubicacion: $fucsia
+    "instagram": $amarillo,
+    "whatsapp": $violeta,
+    "ubicacion": $fucsia
 );
 .footer{
     width: 100%;
@@ -9,7 +9,7 @@ $colores:(
     color: $color-font-generic;
     text-align: center;
     padding-top: $padding-espacio;
-    padding-bottom: $padding-espacio;
+    padding-bottom: 10px;
     
     @include flex(column, center, center);
 
@@ -31,6 +31,7 @@ $colores:(
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         div a{
+            text-decoration: none;
                 @include flex(row, center, center);
                 color: $color-font-generic;
                 p{

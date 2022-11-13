@@ -8,7 +8,7 @@
   color: white;
   text-align: center;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +33,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr; }
     .footer .footer__direcciones div a {
+      text-decoration: none;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -54,6 +55,69 @@
     .footer .footer__direcciones .div--ubicacion:hover .footer__icon {
       fill: #f418c7; }
 
+.main-productos {
+  margin-bottom: 150px; }
+
+.box-productos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 400px 400px;
+  margin: 20px;
+  row-gap: 15px;
+  column-gap: 15px;
+  text-align: center;
+  font-size: calc(9px + 0.5vw); }
+
+.box-imagen {
+  width: 100%;
+  height: 300px;
+  background-color: black; }
+
+.box-imagen a div {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 1; }
+
+.box-info {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.596); }
+  .box-info p {
+    margin: 0; }
+  .box-info span {
+    color: black;
+    font-weight: 700; }
+  .box-info .box-precio {
+    font-size: calc(10px + 1vw); }
+
+.subti-text {
+  width: 70%;
+  text-align: justify;
+  position: relative;
+  left: 15%;
+  padding-bottom: 20px; }
+  .subti-text div {
+    padding: 15px 0; }
+    .subti-text div div {
+      text-align: center; }
+    .subti-text div .span--fucsia {
+      color: #f418c7;
+      font-weight: 800; }
+    .subti-text div .span--violeta {
+      color: #6c12b9;
+      font-weight: 800; }
+    .subti-text div .span--amarillo {
+      color: #eba535;
+      font-weight: 800; }
+
 html {
   font-size: 18px; }
 
@@ -63,8 +127,6 @@ html {
   border: 0;
   font: normal 300 1rem "Nunito Sans";
   list-style: none; }
-  * a {
-    text-decoration: none; }
 
 .navbar {
   transition: 500ms !important; }
@@ -89,7 +151,7 @@ section {
     object-fit: cover; }
   .inicio .inicio__txt {
     position: absolute;
-    max-width: 30vw;
+    width: 30vw;
     left: 4vw;
     top: 20%;
     color: white; }
@@ -98,6 +160,7 @@ section {
       font-weight: 800;
       text-transform: uppercase; }
 
+/* seccion de presentacion */
 .presentacion {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -138,7 +201,7 @@ section {
       width: 40vw; }
     .presentacion .presentacion__txt div p {
       width: 40vw;
-      font-size: calc(0.1rem + 1vw); }
+      font-size: calc(0.5rem + 1vw); }
   .presentacion .presentacion__diseño, .presentacion .presentacion__responsive, .presentacion .presentacion__seguridad {
     display: flex;
     flex-direction: column;
@@ -194,6 +257,7 @@ section {
   height: 60px;
   fill: white; }
 
+/* seccion de trabajos */
 .trabajos {
   display: grid;
   /* height: $alto-foto*5; */
@@ -218,6 +282,7 @@ section {
   .trabajos div {
     background-color: gray; }
 
+/* seccion de comentarios */
 .comentarios {
   height: 100vh;
   background: linear-gradient(220deg, #feb300 0%, #fe8400 47%, #fd269a 100%, #9b159f 100%);
@@ -255,3 +320,32 @@ section {
     .comentarios div .comentarios__segundo {
       font-weight: 800;
       color: black; }
+
+/* footer */
+#creditos {
+  font-size: 0.8rem;
+  font-weight: 200;
+  padding-top: 60px;
+  padding-bottom: 10px; }
+  #creditos a {
+    font-size: 0.8rem;
+    font-weight: 200;
+    text-decoration: none;
+    color: white; }
+
+/* de cada html de productos */
+.encabezado {
+  text-align: center;
+  padding-top: 40px; }
+  .encabezado p {
+    font-size: 15px; }
+    .encabezado p a {
+      color: black;
+      font-size: 15px;
+      text-decoration: none; }
+  .encabezado .encabezado__titulo {
+    padding: 0 0 35px 0;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 800; }

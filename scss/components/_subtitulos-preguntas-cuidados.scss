@@ -1,0 +1,27 @@
+
+$colores:(
+    "fucsia": $fucsia,
+    "violeta": $violeta,
+    "amarillo": $amarillo
+);
+.subti-text{
+    width: 70%;
+
+    text-align: justify;
+    position: relative;
+    left: 15%;
+    padding-bottom: 20px;
+    div{
+        padding: 15px 0;
+        div{
+            text-align: center;
+        }
+        @each $name, $color in $colores {
+            .span--#{$name} {
+                    color: #{$color};
+                font-weight: 800;
+                
+            }
+        }
+    }
+}

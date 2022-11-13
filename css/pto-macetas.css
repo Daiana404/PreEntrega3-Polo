@@ -1,0 +1,13 @@
+
+.box-productos .box .box-imagen a .div-1{
+    background-image: url(../scss/img/macetas/mace1.jpg);
+}
+.box-productos .box .box-imagen a .div-2{
+    background-image: url(../scss/img/macetas/mace2.jpg);
+}
+.box-productos .box .box-imagen a .div-3{
+    background-image: url(../scss/img/macetas/mace3.jpg);
+}
+.box-productos .box .box-imagen a .div-4{
+    background-image: url(../scss/img/macetas/mace4.avif);
+}

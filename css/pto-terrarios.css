@@ -1,0 +1,12 @@
+.box-productos .box .box-imagen a .div-1{
+    background-image: url(../scss/img/terrarios/terra1.avif);
+}
+.box-productos .box .box-imagen a .div-2{
+    background-image: url(../scss/img/terrarios/terra2.avif);
+}
+.box-productos .box .box-imagen a .div-3{
+    background-image: url(../scss/img/terrarios/terra3.jpeg);
+}
+.box-productos .box .box-imagen a .div-4{
+    background-image: url(../scss/img/terrarios/terra4.webp);
+}
